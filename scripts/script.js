@@ -16,21 +16,38 @@ switch(randomNumber) {
 }
 
 function getPlayerChoice() {
-    prompt("What is your choice (Rock, Paper, Scissors)?", )
-
+    prompt("What is your choice (Rock, Paper, Scissors)?", "")
 }
 
 getComputerChoice() = computerResult
 getPlayerChoice() = playerResult
 
-function compareChoice () {
-    if (computerResult === "Rock");
+function compareChoice (computerResult, playerResult) {
+    if (computerResult === "Rock") {
         if (playerResult === "Scissors")
             alert("You Lose!");
         else if (playerResult === "Paper")
             alert("You Win!");
-        else (playerResult === "Paper")
-            alert("You Tied!")
+        else if (playerResult === "Paper")
+            alert("You Tied!");
+    }
+    else if (computerResult === "Paper") {
+        if (playerResult === "Rock")
+            alert("You Lose!");
+        else if (playerResult === "Scissors")
+            alert("You Win");
+        else if (playerResult === "Paper")
+            alert("You Tied!");
+    }
+    else if (computerResult === "Scissors") {
+        if (playerResult === "Paper")
+            alert("You Lose!");
+        else if (playerResult === "Rock")
+            alert("You Win!");
+        else if (playerResult === "Scissors")
+            alert("You Tied!");
+    }
+
 }
 
 /*
