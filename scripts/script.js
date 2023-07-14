@@ -15,14 +15,10 @@ switch(randomNumber) {
     }
 }
 
-function getPlayerChoice() {
-    prompt("What is your choice (Rock, Paper, Scissors)?", "")
-}
+   playerResult = prompt("What is your choice (Rock, Paper, Scissors)?", "");
+computerResult = getComputerChoice();
 
-getComputerChoice() = computerResult
-getPlayerChoice() = playerResult
-
-function compareChoice (computerResult, playerResult) {
+function compareChoice () {
     if (computerResult === "Rock") {
         if (playerResult === "Scissors")
             alert("You Lose!");
@@ -49,6 +45,8 @@ function compareChoice (computerResult, playerResult) {
     }
 
 }
+
+compareChoice();
 
 /*
 Rock Paper Scissors Pseudocode
