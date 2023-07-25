@@ -28,40 +28,37 @@ computerResult = getComputerChoice();
         return playerResult = "Paper";
     });
     Scissors.addEventListener("click", function() {
-        return playerResult = "Rock";
+        return playerResult = "Scissors";
     });
 
-
+let victor = document.getElementById("victor");
 let runGame = document.getElementById("run-game");
 runGame.addEventListener("click" , function compareChoice () {
     if (computerResult === "Rock") {
         if (playerResult === "Scissors")
-            alert("You Lose!");
+            victor.textContent = "Computer, you lost...";
         else if (playerResult === "Paper")
-            alert("You Win!");
-        else if (playerResult === "Paper")
-            alert("You Tied!");
+            victor.textContent = "Player, you won!";
+        else if (playerResult === "Rock")
+            victor.textContent = "No one, it's a tie!"
     }
     else if (computerResult === "Paper") {
         if (playerResult === "Rock")
-            alert("You Lose!");
+            victor.textContent = "Computer, you lost...";
         else if (playerResult === "Scissors")
-            alert("You Win");
+            victor.textContent = "Player, you won!";
         else if (playerResult === "Paper")
-            alert("You Tied!");
-    }
+            victor.textContent = "No one, it's a tie!"
     else if (computerResult === "Scissors") {
         if (playerResult === "Paper")
-            alert("You Lose!");
+            victor.textContent = "Computer, you lost...";
         else if (playerResult === "Rock")
-            alert("You Win!");
+            victor.textContent = "Player, you won!";
         else if (playerResult === "Scissors")
-            alert("You Tied!");
+            victor.textContent = "No one, it's a tie!";
+        }
     }
-
 });
-
-compareChoice();
 
 /*
 Rock Paper Scissors Pseudocode
