@@ -3,9 +3,37 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width">
-        <script src="scripts/script.js"></script>
+        <link rel="stylesheet"  href="styles/style.css">
     </head>
     <body>
-        
+        <div id="player-interface">
+            <h1 id="interface-header">Rock Paper Scissors!</h1>
+            <div id="choice-buttons">
+                <div class="middle-container">
+                    <img src="images/rock-img.webp" alt="Rock Picture">
+                    <button id="rock">Rock</button>
+                </div>
+                <div class="middle-container">
+                    <img src="images/paper-img.png" alt="Paper Picture">
+                    <button id="paper">Paper</button>
+                </div>
+                <div class="middle-container">
+                    <img src="images/scissors-img.png">
+                    <button id="scissors">Scissors</button>
+                </div>
+            </div>
+            <button id="run-game">Face Off!</button>
+        </div>
+        <div id="results-display">
+            <div id="winner-display">
+                <h2>The winner is...</h2>
+                <p id="victor"></p>
+            </div>
+            <div id="choices-display">
+                <p id="player-input"></p>
+                <p id="computer-input"></p>
+            </div>
+    </div>
+    <script src="scripts/script.js"></script>
     </body>
 </html>

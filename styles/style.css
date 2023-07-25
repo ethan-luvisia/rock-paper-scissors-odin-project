@@ -1,0 +1,32 @@
+
+#player-interface {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+}
+
+#interface-header {
+    flex
+}
+
+#choice-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#run-game {
+    flex: 0 0 auto;
+    align-items: center;
+}

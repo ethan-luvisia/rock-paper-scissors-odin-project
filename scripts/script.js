@@ -15,10 +15,25 @@ switch(randomNumber) {
     }
 }
 
-   playerResult = prompt("What is your choice (Rock, Paper, Scissors)?", "");
 computerResult = getComputerChoice();
 
-function compareChoice () {
+
+    let Rock = document.getElementById("rock");
+    let Paper = document.getElementById("paper");
+    let Scissors = document.getElementById("scissors");
+    Rock.addEventListener("click", function() {
+        return playerResult = "Rock";
+    });
+    Paper.addEventListener("click", function() {
+        return playerResult = "Paper";
+    });
+    Scissors.addEventListener("click", function() {
+        return playerResult = "Rock";
+    });
+
+
+let runGame = document.getElementById("run-game");
+runGame.addEventListener("click" , function compareChoice () {
     if (computerResult === "Rock") {
         if (playerResult === "Scissors")
             alert("You Lose!");
@@ -44,7 +59,7 @@ function compareChoice () {
             alert("You Tied!");
     }
 
-}
+});
 
 compareChoice();
 
