@@ -15,7 +15,6 @@ switch(randomNumber) {
     }
 }
 
-computerResult = getComputerChoice();
 
 
     let Rock = document.getElementById("rock");
@@ -31,34 +30,83 @@ computerResult = getComputerChoice();
         return playerResult = "Scissors";
     });
 
+    // player/computer choices above, choice comparision below.
+
 let victor = document.getElementById("victor");
+let playerScore = 0;
+document.getElementById("player-score").textContent = playerScore;
+let computerScore = 0;
+document.getElementById("computer-score").textContent = computerScore;
 let runGame = document.getElementById("run-game");
 runGame.addEventListener("click" , function compareChoice () {
+computerResult = getComputerChoice();
+
     if (computerResult === "Rock") {
-        if (playerResult === "Scissors")
+        if (playerResult === "Scissors") {
             victor.textContent = "Computer, you lost...";
-        else if (playerResult === "Paper")
+            computerScore += 1;
+        }
+        else if (playerResult === "Paper") {
             victor.textContent = "Player, you won!";
-        else if (playerResult === "Rock")
+            playerScore += 1;
+        }
+        else if (playerResult === "Rock") {
             victor.textContent = "No one, it's a tie!"
+        }
     }
     else if (computerResult === "Paper") {
-        if (playerResult === "Rock")
+        if (playerResult === "Rock") {
             victor.textContent = "Computer, you lost...";
-        else if (playerResult === "Scissors")
+            computerScore += 1;
+        }
+        else if (playerResult === "Scissors") {
             victor.textContent = "Player, you won!";
-        else if (playerResult === "Paper")
+            playerScore += 1;
+        }
+        else if (playerResult === "Paper") {
             victor.textContent = "No one, it's a tie!"
+        }
+    }
     else if (computerResult === "Scissors") {
-        if (playerResult === "Paper")
+        if (playerResult === "Paper") {
             victor.textContent = "Computer, you lost...";
-        else if (playerResult === "Rock")
+            computerScore += 1;
+            }
+        else if (playerResult === "Rock") {
             victor.textContent = "Player, you won!";
-        else if (playerResult === "Scissors")
+            playerScore += 1;
+            }   
+        else if (playerResult === "Scissors") {
             victor.textContent = "No one, it's a tie!";
         }
     }
+    document.getElementById("computer-score").textContent = computerScore;
+    document.getElementById("player-score").textContent = playerScore;
+
+    if (computerScore == 5 || playerScore == 5) {
+            gameOver();
+    }
 });
+
+let gameOver = function() {
+    if (computerScore == 5) {
+        document.getElementById("final-victor").textContent = "Final Victor: Computer!";
+        let newGameButton = document.createElement("button");
+        newGameButton.textContent = "New Game";
+        let Results;
+        Results = document.getElementById("final-results");
+        Results.appendChild(newGameButton);
+        
+    }
+    else if (playerScore == 5) {
+        document.getElementById("final-victor").textContent = "Final Victor: Player!";
+        let newGameButton = document.createElement("button");
+        newGameButton.textContent = "New Game";
+        let Results;
+        Results = document.getElementById("final-results");
+        Results.appendChild(newGameButton);
+    }
+}
 
 /*
 Rock Paper Scissors Pseudocode
