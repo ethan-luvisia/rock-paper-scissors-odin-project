@@ -1,14 +1,28 @@
 
+html {
+    background-color:blanchedalmond;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
 #player-interface {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: space-around;
     text-align: center;
     gap: 20px;
 }
 
-#interface-header {
-    flex
+.middle-container {
+    flex-shrink: 1;
+}
+
+#run-game{
+    flex-grow: 0;
+    width: 120px;
 }
 
 #choice-buttons {
@@ -19,14 +33,54 @@
 .middle-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
-#run-game {
-    flex: 0 0 auto;
+
+
+.choice {
+    
+    background-color: var(--background-color);
+    position: relative;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 100px;
+    --background-color: rgb(255, 235, 205);
+    --border: 2px solid black;
+    --border-size: 2px;
+
+}
+
+#results-display {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+.choice.btn-before::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+z-index: -1;
+border: var(--border-size) solid black;
+border-radius: 6px;
+transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.btn-before:hover::before,
+.btn-before:focus::before {
+    top: calc(var(--border-size) * -4);
+    left: calc(var(--border-size) * -4);
+    right: calc(var(--border-size) * -4);
+    bottom: calc(var(--border-size) * -4);
 }

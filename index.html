@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width-device-width">
         <link rel="stylesheet"  href="styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,400&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="player-interface">
@@ -11,18 +14,20 @@
             <div id="choice-buttons">
                 <div class="middle-container">
                     <img src="images/rock-img.webp" alt="Rock Picture">
-                    <button id="rock">Rock</button>
+                    <button class="choice btn-before" id="rock">Rock</button>
                 </div>
                 <div class="middle-container">
                     <img src="images/paper-img.png" alt="Paper Picture">
-                    <button id="paper">Paper</button>
+                    <button class="choice btn-before" id="paper">Paper</button>
                 </div>
                 <div class="middle-container">
                     <img src="images/scissors-img.png">
-                    <button id="scissors">Scissors</button>
+                    <button class="choice btn-before" id="scissors">Scissors</button>
                 </div>
             </div>
-            <button id="run-game">Face Off!</button>
+            <div id="run-container">
+            <button class="choice btn-before-2" id="run-game">Face Off!</button>
+            </div>
         </div>
         <div id="results-display">
             <div id="winner-display">
