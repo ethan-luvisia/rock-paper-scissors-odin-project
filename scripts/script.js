@@ -88,24 +88,44 @@ computerResult = getComputerChoice();
     }
 });
 
+let newGameButtonGenerated = false;
+
 let gameOver = function() {
     if (computerScore == 5) {
         document.getElementById("final-victor").textContent = "Final Victor: Computer!";
+        if (!newGameButtonGenerated) {
         let newGameButton = document.createElement("button");
+        newGameButton.classList.add("choice");
+        newGameButton.classList.add("btn-before");
+        newGameButton.classList.add("centering");
         newGameButton.textContent = "New Game";
+        newGameButton.addEventListener("click", (event) => {
+            window.location.reload();
+        })
         let Results;
         Results = document.getElementById("final-results");
         Results.appendChild(newGameButton);
-        
+        newGameButtonGenerated = true;
     }
+}
+
     else if (playerScore == 5) {
         document.getElementById("final-victor").textContent = "Final Victor: Player!";
+        if (!newGameButtonGenerated) {
         let newGameButton = document.createElement("button");
+        newGameButton.classList.add("choice");
+        newGameButton.classList.add("btn-before");
+        newGameButton.classList.add("centering");
         newGameButton.textContent = "New Game";
+        newGameButton.addEventListener("click", (event) => {
+            window.location.reload();
+        })
         let Results;
         Results = document.getElementById("final-results");
         Results.appendChild(newGameButton);
+        newGameButtonGenerated = true;
     }
+}
 }
 
 /*

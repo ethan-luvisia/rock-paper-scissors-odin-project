@@ -58,6 +58,18 @@ img {
 
 }
 
+#footer-container {
+    display: flex;
+    
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 200px;
+}
+
 #results-display {
     display: flex;
     flex-direction: column;
@@ -83,4 +95,16 @@ transition: top, left, right, bottom, 100ms ease-in-out;
     left: calc(var(--border-size) * -4);
     right: calc(var(--border-size) * -4);
     bottom: calc(var(--border-size) * -4);
+}
+
+#final-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice.btn-before.centering {
+    justify-content: center;
+    align-items: center;
 }
